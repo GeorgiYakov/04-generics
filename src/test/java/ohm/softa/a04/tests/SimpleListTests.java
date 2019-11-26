@@ -42,6 +42,15 @@ public class SimpleListTests {
 	}
 
 	@Test
+	void testAddEmpty() throws Exception {
+		logger.info("Testing to add a new empty list element");
+		SimpleList<Integer> l = new SimpleListImpl<>();
+		l.addDefault(Integer.class);
+		logger.info("Size is :" + l.size());
+		assertEquals(1, l.size());
+	}
+
+	@Test
 	void testSize(){
 		logger.info("Testing if size() method is implemented correctly");
 		assertEquals(5, testList.size());
